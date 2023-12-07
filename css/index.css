@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+/* pagina principal */
+
+* {
+    box-sizing:border-box;
+    font-family:'roboto', 'Montserrat', 'sans-serif';
+    margin:0;
+    padding:0;
+}
+
+body{
+    color: #263114;
+}
+
+a {
+    text-decoration:none;
+}
+header {
+    background-color: #EDF9EB;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-left:80px;
+    padding-right:80px;
+    padding-top:24px;
+    padding-bottom:24px;
+    backdrop-filter: blur(20px);
+   
+}
+
+header nav a {
+    color:black;
+    font-weight: 900;
+    padding:32px;
+    text-decoration:none;
+
+}
+
+/* primeira sessão */
+
+#inicio{
+    display:flex;
+    align-items:center;
+    gap:32px;
+    padding: 24px 80px 128px 80px;
+    position:relative;
+
+}
+
+h1,
+h2 {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 32px;
+    
+}
+.paragrafo {
+    line-height: 150%;
+    margin-bottom:32px;
+
+}
+.button {
+    background-color: #1c6b8c;
+    border-radius: 8px;
+    color:#ffffff;
+    padding: 16px 32px;
+    text-decoration: none;
+}
+
+.button-transp {
+    background-color:transparent;
+    color:#1c6b8c;
+    padding: 16px 32px;
+    text-underline-offset: 4px;
+}
+.absolute {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -10;
+}
+
+/* segunda sessão */
+
+#objetivos {
+
+    display:flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+
+}
+#objetivos li {
+    margin-bottom: 16px;
+    margin-left:32px;
+}
+
+#comoSomos {
+    padding: 64px 80px;
+    text-align: center;
+}
+
+#comoSomos img {
+    margin:64px auto;
+
+}
+#comoSomos .paragrafo {
+    max-width: 950px;
+    margin:0 auto;
+    font-weight:700;
+    font-size:20px;    
+}
+.tabelas {
+    display:flex;
+    text-align: left;
+}
+
+/* terceira sessão */
+
+#duvidas {
+    display:flex;
+    align-items: center;
+    gap: 64;
+    padding: 64px 80px;
+}
+.duvida h3{
+    border: 2px solid #1c6b8c;
+    border-radius:8px;
+    cursor:pointer;
+    padding:24px;
+}
+.duvida img{
+    position:absolute;
+    top:32px;
+    right:24px;
+}
+
+.duvida {
+    position:relative;
+}
+
+.duvida .paragrafo {
+    border-right:1px solid #1c6b8c;
+    border-left:1px solid #1c6b8c;
+    border-bottom:1px solid #1c6b8c;
+    border-radius:0 0 8px 8px;
+    margin-top: -8px;
+    padding:24px
+}
+
+/* estilização do rodapé */
+
+footer {
+    background-color:#EDF9EB;
+    display:flex;
+    justify-content: space-between;
+    gap:80px;
+    padding: 64px 80px;
+    
+}
+
+footer img,
+.footer .titulo {
+    display:block;
+    font-weight:600;
+    margin-bottom: 24px;
+}
+
+footer nav a{
+    color:#263138;
+    display:block;
+    margin-bottom: 16px;
+    text-decoration:none;
+    
+}
+
+footer p {
+    margin-bottom:16px;
+    max-width: 350px;
+}
+
+footer p a {
+    color:#263138;
+    text-decoration:none;
+}
+
+#copyright {
+    background-color: #263138;
+    color: #ffffff;
+    text-align:center;
+    padding:24px;
+    
+}
+#copyright a {
+    color:#FF9A6C
+}
+/* botões flutuantes */
+.floating-container{
+    position:fixed;
+    width:100px;
+    height:200px;
+    bottom:0;
+    right:0;
+    margin: 35px 25px;
+}
+.floating-container:hover {
+    height:350px;
+}
+.floating-container:hover .floating-button {
+    box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+    transform: translatery(5px);
+    transition: all 0.3s;
+}
+.floating-button {
+    position:absolute;
+    width: 65px;
+    height: 65px;
+    background: #2cb3f0;
+    bottom: 0;
+    border-radius: 50%;
+    left: 0;
+    right :0;
+    color: white;
+    line-height: 65px;
+    text-align: center;
+    font-size: 23px;
+    z-index: 100;
+    box-shadow: 0 10px 25px -5px rgba(44,179,240,0.6);
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.float-element {
+    position: relative;
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 15px 0;
+    color: white;
+    display:grid;
+    place-items: center;
+    z-index:0;
+    opacity:0;
+    cursor:pointer;
+}
+
+/* Cores para os float elements com uma classe nth child que faz com que ele pegue cada um dos 4 elementos da tela e retorne eles como filhos */
+
+.float-element:nth-child(1) {
+    background: #42adf5;
+    box-shadow: 0 20px 20px -10px rgba(66,165,245,0.5);
+}
+.float-element:nth-child(2) {
+    background: #f5bc42;
+    box-shadow: 0 20px 20px -10px rgba(241, 146, 20, 0.5);
+}
+.float-element:nth-child(3) {
+    background: #bc42f5;
+    box-shadow: 0 20px 20px -10px rgba(150, 66, 245, 0.5);
+}
+.float-element:nth-child(4) {
+    background: #42f5c8;
+    box-shadow: 0 20px 20px -10px rgba(66, 245, 200, 0.5);
+}
+
+/* Estilização para o elemento flutuante voltar a aparecer */
+@-webkit-keyframes come-in {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        transform: translateX(-50px) scale(0.4);
+    }
+    70% {
+        transform: translateX(0px) scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Configuração para o Floating Container aparecer na tela */
+
+.floating-container:hover .element-container .float-element:nth-child(1) {
+    animation:come-in 0.4s forwards 0.2s;
+}
+.floating-container:hover .element-container .float-element:nth-child(2) {
+    animation:come-in 0.4s forwards 0.4s;
+}
+.floating-container:hover .element-container .float-element:nth-child(3) {
+    animation:come-in 0.4s forwards 0.6s;
+}
+.floating-container:hover .element-container .float-element:nth-child(4) {
+    animation:come-in 0.4s forwards 0.8s;
+}
+
+a {
+    text-decoration:none;
+}
+
+/* Containers e Boxes */
+
+.gif-container {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+/* estilização da modal */
+
+.modalBody {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background: transparent;
+    font-family: 'poppins', sans-serif;
+    color: #fff;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap: 0 120px;
+    grid-template-rows: auto;
+}
+
+.container .box {
+    position: relative;
+    height: 400px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.container .box:nth-child(1)::before {
+    background: linear-gradient(315deg, #ff0057, #e64a19);
+}
+
+.container .box:nth-child(2)::before {
+    background: linear-gradient(315deg, #89ff00, #00bcd4);
+}
+
+.container .box:nth-child(3)::before {
+    background: linear-gradient(315deg, #e91e63, #5d02ff);
+}
+
+.container .box::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #060c25;
+    z-index: -1;
+    transform: skew(2deg, 2deg);
+}
+
+.container .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, .05);
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    padding: 20px;
+    transform: translateY(40px);
+}
+
+.content h2 {
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    font-size: 10em;
+    color: rgba(0, 0, 0, .05);
+    transition: 0.5s;
+}
+
+.box:hover .content h2 {
+    top: -140px;
+}
+
+.box .content h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+}
+
+.box .content p {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 16px;
+}
+
+.box .content a {
+    position: relative;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid #000;
+    display: inline-block;
+    color: #000;
+    transition: .5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.box:hover .content a {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.box .content a:hover {
+    color: #fff;
+    background: #000;
+}
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário PERMA</title>
+  <link rel="stylesheet" href="./css/style3.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+  
+</head>
+<body class="perma-body">
+  <div class="perma-container">
+    <form>
+      <h2 class="perma-title">Feedback Diário</h2>
+
+        <hr class="hr">
+
+      <div class="perma-question">
+        <p>Positividade: Como você descreveria o seu humor geral hoje?</p>
+        <textarea class="perma-text" id="form1" placeholder="Descreva seu humor geral hoje"></textarea>
+      </div>
+
+      <div class="perma-question">
+        <p>Engajamento: Quão envolvido você se sentiu em suas tarefas hoje?</p>
+        <textarea class ="perma-text" id="form2" placeholder="Descreva seu nível de envolvimento"></textarea>
+      </div>
+
+      <div class="perma-question">
+        <p>Relacionamentos: Como você avalia a qualidade das interações sociais no seu ambiente de trabalho?</p>
+        <textarea class ="perma-text" id="form3" placeholder="Descreva a qualidade das interações sociais"></textarea>
+      </div>
+
+      <div class="perma-question">
+        <p>Meaning (Significado): Quão significativas foram suas atividades de trabalho hoje?</p>
+        <textarea class ="perma-text" id="form4" placeholder="Descreva a significância de suas atividades"></textarea>
+      </div>
+
+      <div class="perma-question">
+        <p>Accomplishment (Realização): Como você se sente em relação às suas realizações no trabalho hoje?</p>
+        <textarea class ="perma-text" id="form5" placeholder="Descreva suas realizações no trabalho"></textarea>
+      </div>
+
+      <div class="perma-question">
+        <p>Resiliência: Como você lidou com os desafios que surgiram hoje?</p>
+        <textarea class ="perma-text" id="form6" placeholder="Descreva sua capacidade de lidar com desafios"></textarea>
+      </div>
+
+      <div class="perma-question">
+        <p>Gratidão: Quais são as coisas pelas quais você se sente grato hoje?</p>
+        <textarea class ="perma-text" id="form7" placeholder="Descreva suas fontes de gratidão"></textarea>
+      </div>
+
+      <div class="perma-question">
+        <p>Autoconhecimento: Como você se sente em relação ao seu entendimento sobre si mesmo hoje?</p>
+        <textarea class ="perma-text" id="form8" placeholder="Descreva seu autoconhecimento"></textarea>
+      </div>
+
+      <div class="perma-question">
+        <p>Confiança: Quão confiante você se sentiu para enfrentar os desafios hoje?</p>
+        <textarea class ="perma-text" id="form9" placeholder="Descreva seu nível de confiança"></textarea>
+      </div>
+
+      <div class="perma-question">
+        <p>Equilíbrio: Como você avalia o equilíbrio entre trabalho e vida pessoal hoje?</p>
+        <textarea class ="perma-text" id="form10" placeholder="Descreva seu equilíbrio entre trabalho e vida pessoal"></textarea>
+      </div>
+
+      <button onclick="reg()" class="perma-btn" type="submit">Enviar Respostas</button>
+    </form>
+  </div>
+  <script src="../js/script3.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+
+
+
+</html>
