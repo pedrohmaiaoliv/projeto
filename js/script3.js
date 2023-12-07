@@ -18,14 +18,14 @@ function reg() {
         alertaFormulario();
   }
 
-  function mostrarGif() {
-    const gifContainer = document.getElementById('gifContainer');
-    gifContainer.style.display = 'block';
-  }
-  setTimeout(mostrarGif, 60000);
+  // function mostrarGif() {
+  //   const gifContainer = document.getElementById('gifContainer');
+  //   gifContainer.style.display = 'block';
+  // }
+  // setTimeout(mostrarGif, 60000);
 
-  $(function(){
-    $("#abrir-modal").click(function(){
-      $("#modal-pedro").modal();
-    });
-  });
+  // $(function(){
+  //   $("#abrir-modal").click(function(){
+  //     $("#modal-pedro").modal();
+  //   });
+  // });

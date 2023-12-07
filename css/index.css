@@ -327,6 +327,9 @@ a {
 }
 
 .container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     position: relative;
     width: 90%;
     display: grid;
@@ -342,7 +345,6 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #000;
     color: #000;
 }
 
